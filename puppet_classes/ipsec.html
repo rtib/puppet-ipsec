@@ -6,7 +6,7 @@
 <title>
   Puppet Class: ipsec
   
-    &mdash; Documentation by YARD 0.9.9
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
@@ -239,7 +239,7 @@ in /etc/ipsec.d/ is not utilised.</p>
       
       
         <span class='type'>(<tt>Struct[{
-    setup       =&gt; Optional[Hash[String,Hash]],
+    setup       =&gt; Optional[Hash[String,String]],
     authorities =&gt; Optional[Hash[String,Hash]],
     connections =&gt; Optional[Hash[String,Hash]],
   }]</tt>)</span>
@@ -297,7 +297,7 @@ class ipsec (
   Array[Ipsec::Secret]        $secrets,
   Array[Stdlib::Absolutepath] $secret_includes,
   Struct[{
-    setup       =&gt; Optional[Hash[String,Hash]],
+    setup       =&gt; Optional[Hash[String,String]],
     authorities =&gt; Optional[Hash[String,Hash]],
     connections =&gt; Optional[Hash[String,Hash]],
   }]                          $conf,
