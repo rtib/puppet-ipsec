@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.4](https://github.com/rtib/puppet-ipsec/tree/v0.1.4) (2018-04-04)
+[Full Changelog](https://github.com/rtib/puppet-ipsec/compare/v0.1.3...v0.1.4)
+
+**Merged pull requests:**
+
+- Fixed config setup section data type error. Removed extra empty lines… [\#6](https://github.com/rtib/puppet-ipsec/pull/6) ([starchx](https://github.com/starchx))
+
 ## [v0.1.3](https://github.com/rtib/puppet-ipsec/tree/v0.1.3) (2017-11-23)
 [Full Changelog](https://github.com/rtib/puppet-ipsec/compare/v0.1.2...v0.1.3)
 
