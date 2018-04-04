@@ -4,7 +4,7 @@
 
 config setup
 <% if $ipsec::conf['setup'] =~ Hash {
-  $ipsec::conf['setup'].each |String $k, Data $v| { %>
+  $ipsec::conf['setup'].each |String $k, Data $v| { -%>
   <%= $k %> = <%= $v %>
 <%}
 }%>

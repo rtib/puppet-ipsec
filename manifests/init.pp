@@ -89,7 +89,7 @@ class ipsec (
   Array[Ipsec::Secret]        $secrets,
   Array[Stdlib::Absolutepath] $secret_includes,
   Struct[{
-    setup       => Optional[Hash[String,Hash]],
+    setup       => Optional[Hash[String,String]],
     authorities => Optional[Hash[String,Hash]],
     connections => Optional[Hash[String,Hash]],
   }]                          $conf,
