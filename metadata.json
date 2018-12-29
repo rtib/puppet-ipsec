@@ -3,16 +3,9 @@
   "version": "0.1.4",
   "author": "T. Repasi",
   "summary": "Setting IPSec up using Strongswan",
-  "tags": [
-    "networking",
-    "IPSec",
-    "strongswan",
-    "security",
-    "encryption"
-  ],
   "license": "Apache-2.0",
-  "project_page": "https://github.com/rtib/puppet-ipsec",
   "source": "https://github.com/rtib/puppet-ipsec.git",
+  "project_page": "https://github.com/rtib/puppet-ipsec",
   "issues_url": "https://github.com/rtib/puppet-ipsec/issues",
   "dependencies": [
     {
@@ -24,6 +17,7 @@
       "version_requirement": ">= 4.0.0 < 5.0.0"
     }
   ],
+  "data_provider": "hiera",
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
@@ -44,8 +38,14 @@
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
-  "data_provider": "hiera",
-  "pdk-version": "1.2.1",
-  "template-url": "https://github.com/puppetlabs/pdk-module-template",
-  "template-ref": "heads/master-0-gd2dae81"
+  "tags": [
+    "networking",
+    "IPSec",
+    "strongswan",
+    "security",
+    "encryption"
+  ],
+  "pdk-version": "1.8.0",
+  "template-url": "https://github.com/rtib/pdk-templates",
+  "template-ref": "heads/master-0-g032fcb1"
 }
