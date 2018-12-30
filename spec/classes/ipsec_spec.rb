@@ -63,9 +63,8 @@ describe 'ipsec' do
         it do
           is_expected.to contain_service('strongswan')
             .with(
-              'enable'    => true,
-              'hasstatus' => false,
-              'restart'   => '/usr/sbin/ipsec reload',
+              'ensure' => 'running',
+              'enable' => true,
             )
         end
       end
