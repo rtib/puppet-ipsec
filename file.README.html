@@ -6,7 +6,7 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.9.12
+    &mdash; Documentation by YARD 0.9.16
   
 </title>
 
@@ -79,30 +79,30 @@ src="https://img.shields.io/puppetforge/dt/trepasi/ipsec.svg"></a></p>
 
 <h2 id="label-Table+of+Contents">Table of Contents</h2>
 <ol><li>
-<p><a href="#description">Description</a></p>
+<p><a href="#label-Description">Description</a></p>
 </li><li>
-<p><a href="#setup">Setup - The basics of getting started with ipsec</a></p>
+<p><a href="#label-Setup">Setup - The basics of getting started with ipsec</a></p>
 </li><li>
-<p><a href="#usage">Usage - Configuration options and additional
+<p><a href="#label-Usage">Usage - Configuration options and additional
 functionality</a></p>
 <ul><li>
-<p><a href="#defining-secrets">Defining secrets</a></p>
+<p><a href="#label-Defining+secrets">Defining secrets</a></p>
 </li><li>
-<p><a href="#creating-configuration">Creating configuration</a></p>
+<p><a href="#label-Creating+configuration">Creating configuration</a></p>
 </li><li>
-<p><a href="#setup-section">Setup section</a></p>
+<p><a href="#label-Setup+section">Setup section</a></p>
 </li><li>
-<p><a href="#authority-sections">Authority sections</a></p>
+<p><a href="#label-Authority+sections">Authority sections</a></p>
 </li><li>
-<p><a href="#connection-sections">Connection sections</a></p>
+<p><a href="#label-Connection+sections">Connection sections</a></p>
 </li></ul>
 </li><li>
-<p><a href="#reference">Reference - An under-the-hood peek at what the module
+<p><a href="#label-Reference">Reference - An under-the-hood peek at what the module
 is doing and how</a></p>
 </li><li>
-<p><a href="#limitations">Limitations - OS compatibility, etc.</a></p>
+<p><a href="#label-Limitations">Limitations - OS compatibility, etc.</a></p>
 </li><li>
-<p><a href="#development">Development - Guide for contributing to the
+<p><a href="#label-Development">Development - Guide for contributing to the
 module</a></p>
 </li></ol>
 
@@ -171,7 +171,8 @@ file and file the secrets through other tools.</p>
       slotnr: 1
       module: opensc
       keyid: 45
-      prompt: true</code></pre>
+      prompt: true
+</code></pre>
 
 <p>Note, that non of the above used secrets (passphrase or pin fields) are
 treated as sensitive content.</p>
@@ -181,7 +182,8 @@ include files.</p>
 
 <pre class="code ruby"><code class="ruby">ipsec::secret_includes:
   - &#39;/var/lib/strongswan/ipsec.secrets.inc&#39;
-  - &#39;/etc/ipsec.d/very.secret&#39;</code></pre>
+  - &#39;/etc/ipsec.d/very.secret&#39;
+</code></pre>
 
 <h3 id="label-Creating+configuration">Creating configuration</h3>
 
@@ -206,7 +208,8 @@ configuring a certification authority. These section may be created via
     myca:
       auto: add
       cacert: &#39;/etc/ssl/certs/myca.pem&#39;
-      crluri: &#39;file:///etc/ssl/crls/myca_crl.pem&#39;</code></pre>
+      crluri: &#39;file:///etc/ssl/crls/myca_crl.pem&#39;
+</code></pre>
 
 <p>Alternatively, ca sections can be created by resource instances of type
 <code>ipsec::conf::ca</code>.</p>
@@ -214,7 +217,8 @@ configuring a certification authority. These section may be created via
 <pre class="code ruby"><code class="ruby">ipsec::conf::ca { &#39;myca&#39;:
   auto   =&gt; &#39;add&#39;,
   cacert =&gt; &#39;/etc/ssl/certs/myca.pem&#39;,
-  crluri =&gt; &#39;file:///etc/ssl/crls/myca_crl.pem&#39;</code></pre>
+  crluri =&gt; &#39;file:///etc/ssl/crls/myca_crl.pem&#39;
+</code></pre>
 
 <h4 id="label-Connection+sections">Connection sections</h4>
 
@@ -231,7 +235,8 @@ directly within your puppet code.</p>
       leftcert: hostcert.pem
       right: 192.168.56.1
       rightid: %any
-      auto: route</code></pre>
+      auto: route
+</code></pre>
 
 <pre class="code ruby"><code class="ruby">ipsec::conf::conn { &#39;test&#39;:
   type     =&gt; &#39;transport&#39;,
@@ -240,7 +245,8 @@ directly within your puppet code.</p>
   right    =&gt; &#39;192.168.56.1&#39;,
   rightid  =&gt; &#39;%any&#39;,
   auto     =&gt; &#39;route&#39;,
-}</code></pre>
+}
+</code></pre>
 
 <h2 id="label-Reference">Reference</h2>
 <ul><li>
@@ -336,7 +342,8 @@ or the prompt option enabled.</p>
   keyid  =&gt; Integer,
   pin    =&gt; Optional[Integer],
   prompt =&gt; Optional[Boolean],
-}]</code></pre>
+}]
+</code></pre>
 
 <p>Note! The pin is not treated as sensitive data. Use this feature with care,
 only in the case no other solution is possible. The secrets_include
