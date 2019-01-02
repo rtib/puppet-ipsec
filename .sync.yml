@@ -34,6 +34,8 @@ spec/spec_helper.rb:
   mock_with: ':rspec'
   hiera_config: './spec/hiera.yaml'
 .travis.yml:
+  global_env:
+    - RUBYGEMS_VERSION=2.7.8
   docker_sets:
     - set: debian-8
     - set: debian-9
