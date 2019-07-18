@@ -46,7 +46,7 @@
     "security",
     "encryption"
   ],
-  "pdk-version": "1.8.0",
-  "template-url": "https://github.com/rtib/pdk-templates",
-  "template-ref": "heads/master-0-g032fcb1"
+  "pdk-version": "1.11.1",
+  "template-url": "https://github.com/rtib/pdk-templates#testing",
+  "template-ref": "remotes/origin/testing-0-gcecf8c8"
 }
