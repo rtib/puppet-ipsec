@@ -1,4 +1,6 @@
 ---
+changelog_user: rtib
+changelog_project: puppet-ipsec
 mock_with: ':rspec'
 .travis.yml:
   docker_sets:
