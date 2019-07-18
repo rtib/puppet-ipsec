@@ -37,6 +37,13 @@ Gemfile:
         from_env: BEAKER_HOSTGENERATOR_VERSION
       - gem: beaker-rspec
         from_env: BEAKER_RSPEC_VERSION
+Rakefile:
+  extras:
+    - |
+      Blacksmith::RakeTask.new do |t|
+        t.build = false
+        t.tag_message_pattern = "Release v%s"
+      end
 spec/spec_helper.rb:
   hiera_config: './spec/hiera.yaml'
 spec/spec_helper_acceptance.rb:

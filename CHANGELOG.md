@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v0.1.4](https://github.com/rtib/puppet-ipsec/tree/v0.1.4) (2019-07-18)
+## [v0.1.5](https://github.com/rtib/puppet-ipsec/tree/v0.1.5) (2019-07-18)
 
-[Full Changelog](https://github.com/rtib/puppet-ipsec/compare/v0.1.4...v0.1.4)
+[Full Changelog](https://github.com/rtib/puppet-ipsec/compare/v0.1.4...v0.1.5)
 
 ### Added
 
