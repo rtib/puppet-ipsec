@@ -1,6 +1,6 @@
 {
   "name": "trepasi-ipsec",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "T. Repasi",
   "summary": "Setting IPSec up using Strongswan",
   "license": "Apache-2.0",
@@ -10,11 +10,11 @@
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 4.0.0 < 5.0.0"
+      "version_requirement": ">= 4.0.0 < 7.0.0"
     },
     {
       "name": "puppetlabs-concat",
-      "version_requirement": ">= 4.0.0 < 5.0.0"
+      "version_requirement": ">= 4.0.0 < 7.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -22,21 +22,23 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "8",
-        "9"
+        "9",
+        "10"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "16.04",
-        "18.04"
+        "18.04",
+        "20.04"
       ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.0 < 6.0.0"
+      "version_requirement": ">= 4.10.0 < 7.0.0"
     }
   ],
   "tags": [
@@ -46,7 +48,7 @@
     "security",
     "encryption"
   ],
-  "pdk-version": "1.11.1",
-  "template-url": "https://github.com/rtib/pdk-templates#testing",
-  "template-ref": "remotes/origin/testing-0-gcecf8c8"
+  "pdk-version": "1.18.1",
+  "template-url": "https://github.com/rtib/pdk-templates#master",
+  "template-ref": "heads/master-0-g7cf0403"
 }
